@@ -1,0 +1,22 @@
+# Argo CD 에게 "이 저장소의 k8s 폴더를 지켜보다가 바뀌면 배포해" 라고 알려 주는 파일
+# REPO_URL 은 scripts/setup-argocd.sh 가 git remote 주소로 바꿔서 적용한다
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cicd-test
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: REPO_URL
+    targetRevision: main
+    path: k8s
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: cicd-test
+  syncPolicy:
+    automated:
+      prune: true     # 저장소에서 지운 리소스는 클러스터에서도 지운다
+      selfHeal: true  # 클러스터를 손으로 바꿔도 저장소 상태로 되돌린다
+    syncOptions:
+      - CreateNamespace=true

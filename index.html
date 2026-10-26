@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>k3s CI/CD 테스트</title>
+  </head>
+  <body>
+    <main>
+      <h1>k3s CI/CD 테스트</h1>
+      <p class="hint">코드를 고쳐 push 하면 GitHub Actions 가 이미지를 만들고, Argo CD 가 k3s 에 배포해요.</p>
+
+      <section class="card">
+        <h2>지금 배포된 버전</h2>
+        <dl>
+          <dt>버전</dt><dd id="version">-</dd>
+          <dt>커밋</dt><dd id="commit">-</dd>
+          <dt>빌드 시각</dt><dd id="buildTime">-</dd>
+          <dt>응답한 파드</dt><dd id="pod">-</dd>
+          <dt>파드 시작 시각</dt><dd id="startedAt">-</dd>
+        </dl>
+        <p id="status" class="status">불러오는 중...</p>
+      </section>
+
+      <section class="card">
+        <h2>지금까지 응답한 파드</h2>
+        <p class="hint">파드가 2개라 번갈아 응답해요. 새 버전이 배포되면 이름이 바뀌어요.</p>
+        <ul id="pods"></ul>
+      </section>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
