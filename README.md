@@ -30,7 +30,7 @@ PC 쪽에서 GitHub 을 가져오는 방식이라 공유기 · 방화벽 설정�
 1. GitHub 에서 **공개** 저장소 `k3s-cicd-test` 를 빈 상태로 만든다 (README 없이)
 2. 연결하고 push
    ```bash
-   git remote add origin https://fbrnjsghks@github.com/HyunYulKim/k3s-cicd-test.git
+   git remote add origin https://RYOOKWONHWAN@github.com/RYOOKWONHWAN/k3s-cicd-test.git
    git add . && git commit -m "first commit" && git push -u origin main
    ```
 3. Actions 가 끝나면 GitHub 프로필 → Packages → `k3s-cicd-test` → Package settings 에서 **Public** 인지 확인 (비공개면 k3s 가 이미지를 못 받는다)

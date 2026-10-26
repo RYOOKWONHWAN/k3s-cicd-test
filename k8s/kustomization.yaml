@@ -9,5 +9,5 @@ resources:
 # 아래 newName · newTag 는 GitHub Actions 가 배포할 때마다 고친다. 손으로 바꾸지 않는다
 images:
   - name: cicd-test-app
-    newName: ghcr.io/hyunyulkim/k3s-cicd-test
+    newName: ghcr.io/ryookwonhwan/k3s-cicd-test
     newTag: latest
