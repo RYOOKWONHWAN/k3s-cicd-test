@@ -84,3 +84,14 @@ ul {
   padding-left: 20px;
   font-family: ui-monospace, Consolas, monospace;
 }
+
+/* v1.0.1: CD 테스트용 배지 */
+.badge {
+  display: inline-block;
+  margin: 0 0 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.9rem;
+}
