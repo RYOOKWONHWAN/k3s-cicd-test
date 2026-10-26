@@ -10,4 +10,4 @@ resources:
 images:
   - name: cicd-test-app
     newName: ghcr.io/ryookwonhwan/k3s-cicd-test
-    newTag: sha-68acefd
+    newTag: sha-fe338e7
